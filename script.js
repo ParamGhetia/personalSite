@@ -17,12 +17,14 @@ async function getItems(path) {
 }
 
 async function renderContent(path) {
+  window.location.hash = path.replace('content/', '');    
   const res = await fetch(`${rawBase}/${path}`);
   const text = await res.text();
   document.querySelector('.content').innerHTML = marked.parse(text);
 }
 
 async function navigate(path) {
+  window.location.hash = path.replace('content/', '');
   const items = await getItems(path);
   const folders = items.filter(i => i.type === 'dir');
   const files = items.filter(i => i.name.endsWith('.md'));
@@ -62,4 +64,15 @@ async function navigate(path) {
 }
 
 // start at content folder
-navigate(CONTENT_PATH);
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+  const path = `content/${hash}`;
+  // check if it's a file or folder
+  if (hash.endsWith('.md')) {
+    renderContent(path);
+  } else {
+    navigate(path);
+  }
+} else {
+  navigate(CONTENT_PATH);
+}
