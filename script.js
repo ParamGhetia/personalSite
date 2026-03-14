@@ -36,7 +36,6 @@ async function navigate(path) {
   // otherwise build links from folders and files
   const cardLinks = document.querySelector('.card-links');
   cardLinks.innerHTML = '';
-
   // folders first
   folders.forEach(folder => {
     const a = document.createElement('a');
