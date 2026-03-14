@@ -1,5 +1,5 @@
-const GITHUB_USER = 'YOUR_USERNAME';
-const GITHUB_REPO = 'YOUR_REPO';
+const GITHUB_USER = 'ParamGhetia';
+const GITHUB_REPO = 'personalSite';
 const BRANCH = 'main';
 const CONTENT_PATH = 'content';
 
