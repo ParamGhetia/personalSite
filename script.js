@@ -25,16 +25,20 @@ async function getItems(path) {
 }
 
 async function renderContent(path) {
+  console.log(path)
   window.location.hash = path.replace('content/', '');
   const res = await fetch(`${rawBase}/${path}`);
-  let text = await res.text();
-  
+  let text = await res.text(); 
+
   const folder = path.substring(0, path.lastIndexOf('/'));
+  console.log('folder:', folder);
+  console.log('before:', text);
+  
   text = text.replace(
     /!\[([^\]]*)\]\((?!http)([^)]+)\)/g,
     `![$1](${rawBase}/${folder}/$2)`
   );
-
+  console.log('after:', text);
   document.querySelector('.content').innerHTML = marked.parse(text);
 
 }
