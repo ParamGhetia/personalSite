@@ -90,6 +90,18 @@ p, h1, h2, h3, .content {
     drop-shadow(0px 0px 35px rgba(0,0,0,0.15));
 }
 
+.content p {
+  margin-top: 0px;
+}
+
+.content h1 {
+  margin-bottom: 1cqw;
+}
+
+.content a {
+  color: #ad5147;
+}
+
 .content .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -118,6 +130,11 @@ p, h1, h2, h3, .content {
 .content .float-right img {
   width: 100%;
   float: none;
+  margin: 0%;
+}
+
+.content .float-right p {
+  display: contents;
 }
 
 /*
