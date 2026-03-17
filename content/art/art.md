@@ -1,0 +1,1 @@
+placeholder: describe the kind of art il ike highly technical etc. have some references of what i mean here
