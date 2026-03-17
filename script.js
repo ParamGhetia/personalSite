@@ -47,7 +47,7 @@ async function navigate(path) {
   history.push(path);
   window.location.hash = path.replace('content/', '');
   const items = await getItems(path);
-  const folders = items.filter(i => i.type === 'dir');
+  const folders = items.filter(i => i.type === 'dir' && i.name.toLowerCase() !== 'assets');
   const files = items.filter(i => i.name.endsWith('.md'));
 
   const folderName = path.split('/').pop();
@@ -103,18 +103,6 @@ if (hash) {
 }
 
 document.querySelector('.cardicon').addEventListener('click', () => {
-  history.pop(); // remove current
-  const previous = history.pop(); // get previous
-  if (previous) {
-    navigate(previous);
-  } else {
-    navigate(CONTENT_PATH);
-  }
-});
-
-const backSound = new Audio('page-flip-01a.mp3');
-
-document.querySelector('.cardicon').addEventListener('click', () => {
   backSound.currentTime = 0;
   backSound.play();
   history.pop();
@@ -125,3 +113,5 @@ document.querySelector('.cardicon').addEventListener('click', () => {
     navigate(CONTENT_PATH);
   }
 });
+
+const backSound = new Audio('page-flip-01a.mp3');

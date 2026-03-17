@@ -206,11 +206,12 @@ p, h1, h2, h3, .content {
 
 .cardicon {
   position: absolute;
-  top: -4.4cqw;
-  left: 4.2cqw;
-  width: 23cqw;
+  top: 0.4cqw;
+  left: 8cqw;
+  width: 19cqw;
   opacity: 0.94;
   filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.25));
+  pointer-events: visibleFill;
   z-index: 5;
 }
 
