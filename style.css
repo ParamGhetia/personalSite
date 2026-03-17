@@ -6,7 +6,7 @@ html, body {
 }
 
 * {
-  cursor: url('Precision\ Select\ G191.cur'), auto; /* ccursors: https://www.rw-designer.com/cursor-set/guest-191-s-hands*/
+  cursor: url('assets/Precision\ Select\ G191.cur'), auto; /* ccursors: https://www.rw-designer.com/cursor-set/guest-191-s-hands*/
   }
 
 /* wrapper becomes the viewport container */
@@ -30,18 +30,18 @@ html, body {
   pointer-events: none;
   z-index: 999;
   opacity: 0.17;
-  background-image: url('noise.png'); /* watercolor paper texture*/
+  background-image: url('assets/noise.png'); /* watercolor paper texture*/
   background-size: 200px 200px;
   background-repeat: repeat;
   mix-blend-mode: overlay;
 }
 
 a, button, .cardicon {
-  cursor: url('Normal\ Select\ G191.cur'), pointer;
+  cursor: url('assets/Normal\ Select\ G191.cur'), pointer;
 }
 
 p, h1, h2, h3, .content {
-  cursor: url('Text\ Select\ G191.cur'), text;
+  cursor: url('assets/Text\ Select\ G191.cur'), text;
 }
 
 /* right grid paper region */
@@ -53,7 +53,7 @@ p, h1, h2, h3, .content {
   width: 58%;
   height: 100%;
 
-  background-image: url("gridpapercropped.jpg");
+  background-image: url("assets/gridpapercropped.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -205,7 +205,7 @@ p, h1, h2, h3, .content {
   left: 0;
   width: 44.1%; /* extend to card edge */
   height: 100%;
-  background-image: url("leftbg.png");
+  background-image: url("assets/leftbg.png");
   background-size: 100% 100%;
   background-position: right center;
   z-index: 5;
@@ -236,7 +236,7 @@ p, h1, h2, h3, .content {
   position: relative;
   width: 42.8cqw;
   container-type: inline-size;
-  background-image: url("linedpapergraffiti.png");
+  background-image: url("assets/linedpapergraffiti.png");
   background-size: cover;
   background-repeat: no-repeat;
 
