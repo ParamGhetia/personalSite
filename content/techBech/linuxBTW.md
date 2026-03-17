@@ -2,9 +2,8 @@
 Currently, Fedora Linux 43 is my daily driver but in the future, (once I get another laptop) I'd like to try either Arch or CachyOS.
 Amongst other distros, Fedora seems to be the best one. It just works while still allowing a lot of customizability.
 For context, I've tried EndeavourOS and Kubuntu. Amongst the debian-based and arch-based, I found Fedora to be my favorite.
-[Setup 1](assets/setup1.jpg)
+![Setup 1](assets/setup1.jpg)
 ![Setup 2](assets/setup2.jpg)
-
 
 ### DE & WM
 My desktop environment is KDE Plasma 6. Among a lot of the other desktop environments/window managers, KDE is definately my favorite. It has tons of functionality and makes it very easy to customize. Maybe in the future though I'd try Hyprland though.
