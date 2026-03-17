@@ -82,8 +82,6 @@ p, h1, h2, h3, .content {
 }
 
 .content img {
-  float: right;
-  margin-left: 2cqw;
   margin: 1cqw auto;
   width: 26cqh;
   opacity: 1;
