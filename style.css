@@ -83,11 +83,12 @@ p, h1, h2, h3, .content {
 }
 
 .content img {
-  margin: 1cqw auto;
-  width: 26cqh;
+  margin-top: 1.2cqw;
+  margin-bottom: 0.1cqw;
+  width: 35cqw;
   opacity: 1;
-  border: 3px solid rgba(33, 33, 33, 0.88);
-  filter: drop-shadow(4px 0px 23px rgba(0,0,0,0.5))
+  border: 2.8px solid rgba(33, 33, 33, 0.88);
+  filter: drop-shadow(4px 0px 23px rgba(0,0,0,0.35))
     drop-shadow(0px 0px 35px rgba(0,0,0,0.15));
 }
 
@@ -137,6 +138,16 @@ p, h1, h2, h3, .content {
 
 .content .float-right p {
   display: contents;
+}
+
+.content.text-only p, 
+.content.text-only h1, 
+.content.text-only h2, 
+.content.text-only h3, 
+.content.text-only li {
+  filter: blur(0.43px) drop-shadow(0px 0px 3.6px rgba(0,0,0,0.14));
+  opacity: 0.885;
+  mix-blend-mode: multiply;
 }
 
 /*
@@ -277,10 +288,11 @@ p, h1, h2, h3, .content {
   font-size: 4.3cqw; /* WAIT EUREKA, THE SOLUTION TO THE ISSUE WHERE THE RESIZING OF WINDOW WOULD MESS EVERYTHING UP. The isseu would be that the window height would change the line height and since the card is tied to the lines of text, it will also expand but it is cropped not scaled so it will not scale up it will just add more lines adn teh lines of text will be bigger but not the same spacing as the image so thats where teh drift occurs. However if we can restrict the spacing to the width of the paper (thats teh part that changes) then we can make this thing work.
   */
   /* okay that was part of the solution. IT WAS FUCKASS GAP IN CARD LINKS ALL ALONG THAT WAS ADDING EXTRA SHIT AND IT WAS TIED TO qcH FUCKK*/
-  opacity: 0.85;
+  opacity: 0.8;
 
   line-height: 1.068;
 
   letter-spacing: -0.045em;
-  filter: blur(0.36px) drop-shadow(0px 0px 2.4px rgba(0,0,0,0.22));
+  filter: blur(0.52px) drop-shadow(0px 0px 2.4px rgba(0,0,0,0.22));
+  mix-blend-mode: multiply;
 }

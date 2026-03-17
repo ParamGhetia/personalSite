@@ -26,6 +26,8 @@ async function getItems(path) {
   return items;
 }
 
+marked.use({ breaks: true });
+
 async function renderContent(path) {
   console.log(path)
   window.location.hash = path.replace('content/', '');
@@ -43,6 +45,14 @@ async function renderContent(path) {
   console.log('after:', text);
   document.querySelector('.content').innerHTML = marked.parse(text);
 
+  document.querySelector('.content').innerHTML = marked.parse(text);
+
+  const hasImages = document.querySelector('.content img');
+  if (!hasImages) {
+    document.querySelector('.content').classList.add('text-only');
+  } else {
+    document.querySelector('.content').classList.remove('text-only');
+  }
 }
 
 async function navigate(path) {
